@@ -36,8 +36,8 @@ class Calculator extends React.Component<IProps, IState> {
       <Fragment>
         <h4>Initial Investment PKR {amountValue}</h4>
         <InputRange
-          step={10}
-          maxValue={9999999999999}
+          step={100}
+          maxValue={10000000}
           minValue={0}
           value={amountValue}
           onChange={this.handleAmountChange}
