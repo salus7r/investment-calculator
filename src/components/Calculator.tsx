@@ -17,7 +17,7 @@ class Calculator extends React.Component<IProps, IState> {
     super(props);
     
     this.state = {
-      amountValue: 5000,
+      amountValue: 0,
       yearsValue: 1
     };
   }
@@ -30,15 +30,15 @@ class Calculator extends React.Component<IProps, IState> {
   };
 
   render() {
-    let { amountValue, yearsValue } = this.state;
+    const { amountValue, yearsValue } = this.state;
 
     return (
       <Fragment>
-        <h4>I want to borrow PKR {amountValue}</h4>
+        <h4>Initial Investment PKR {amountValue}</h4>
         <InputRange
-          step={100}
-          maxValue={20000}
-          minValue={1000}
+          step={10}
+          maxValue={9999999999999}
+          minValue={0}
           value={amountValue}
           onChange={this.handleAmountChange}
         />
